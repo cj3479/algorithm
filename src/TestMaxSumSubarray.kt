@@ -16,15 +16,32 @@ fun main(args: Array<String>) {
 fun maxSum(nums: IntArray): Int {
     var max = nums[0]
     var sum = 0
-    for (i in 0 until nums.size) {
-        if (sum > 0) {
-            sum += i
+    var index = 0
+    if(nums.size==1){
+        return max
+    }
+    while (index < nums.size) {
+        if (sum + nums[index] < nums[index]) {
+            sum = nums[index]
         } else {
-            sum = i
+            sum += nums[index]
         }
+        index++
         max = kotlin.math.max(sum, max)
     }
     return max
+}
+//        for (i in 0 until nums.size) {
+//            if (sum + nums[i] < 0) {
+//                if (i + 1 < nums.size) {
+//                    sum = nums[i++]
+//                }
+//            } else {
+//                sum += nums[i]
+//            }
+//            max = kotlin.math.max(sum, max)
+//        }
+//    return max
 //    val f = IntArray(nums.size)
 //    var max = nums[0]
 //
@@ -72,7 +89,6 @@ fun maxSum(nums: IntArray): Int {
 //    }
 //
 //    return max
-}
 //fun maxSubArray(nums: IntArray): Int {
 //    var storeMinN = -Int.MAX_VALUE;
 //    var storeMaxP = 1;
