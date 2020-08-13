@@ -33,13 +33,13 @@ fun main(args: Array<String>) {
 fun outPutMinCoins(chips: IntArray) {
     var oddNum = 0
     var evenNum = 0
-    for (i in chips) {
+/*    for (i in chips) {
         if (i % 2 == 0) {
             evenNum++
         } else {
             oddNum++
         }
-    }
+    }*/
     if (evenNum == 0 || oddNum == 0) {
         println("0")
     } else {

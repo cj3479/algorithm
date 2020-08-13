@@ -1,6 +1,15 @@
+
+import TestKotlin.testExtend
 import java.util.*
 
+//import TestKotlinA
 fun main(args: Array<String>) {
+    var ddd = TestKotlinA()
+    ddd.testBB()
+    var ss :String= "dsfdf"
+    ss.testExtendFF("")
+    ss.testExtend("fdf")
+    TestKotlin.testFF("ddd");
     val sc = Scanner(System.`in`)
     val input = sc.nextInt()
 //    val input = sc.next()
